@@ -29,7 +29,9 @@ git config --global user.email "email"
 config --global user.name "username"
 ```
 
-### Apache Airflow installation 
+### Apache Airflow installation
+
+*Note: Make sure to export the AIRFLOW_HOME env variable every time you open a new variable -* `export AIRFLOW_HOME=~/./apache-airflow-demo`
 
 1. Update the WSL package manager:
 
@@ -52,6 +54,9 @@ config --global user.name "username"
 
 4. Install Apache Airflow using pip:
 
+Commands differ in the pip page:
+<https://pypi.org/project/apache-airflow/>
+
 ```bash
    pip install apache-airflow
 ```
@@ -63,6 +68,12 @@ Optionally, if you need specific extras like celery, postgres, or mysql:
 ```
 
 5. Initialize the Airflow database:
+
+5.1. Set relative path to database in the project folder:
+
+```bash
+   export AIRFLOW_HOME=~/./apache-airflow-demo
+```
 
 ```bash
    airflow db init
@@ -78,6 +89,12 @@ Optionally, if you need specific extras like celery, postgres, or mysql:
        --role Admin \
        --email <admin@example.com>
 ```
+
+```bash
+airflow users create --username admin --firstname Admin --lastname User --role Admin --email admin@example.com
+```
+
+password for local: 123456
 
 7. Start the Airflow webserver and scheduler:
 
