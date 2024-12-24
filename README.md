@@ -29,7 +29,7 @@ git config --global user.email "email"
 config --global user.name "username"
 ```
 
-### Apache Airflow installation
+## Apache Airflow installation
 
 *Note: Make sure to export the AIRFLOW_HOME env variable every time you open a new variable -* `export AIRFLOW_HOME=~/./apache-airflow-demo`
 
@@ -102,3 +102,7 @@ password for local: 123456
    airflow webserver -p 8080
    airflow scheduler
 ```
+
+## Airflow in Docker
+
+[Running Airflow in Docker](https://airflow.apache.org/docs/apache-airflow/stable/howto/docker-compose/index.html#initializing-environment)
