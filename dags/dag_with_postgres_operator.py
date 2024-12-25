@@ -2,7 +2,7 @@ from datetime import datetime, timedelta
 
 from airflow import DAG
 from airflow.providers.postgres.operators.postgres import PostgresOperator
-
+# even though we I get a dependency warning this still wprks in docker
 
 default_args = {
     'owner': 'neji',
